@@ -2,7 +2,7 @@
 #include<conio.h>
 int main()
 {
-	int i,j,n,time,a,f=0,timeI;
+	int i,j,n,time,a,f=0,timeInterval;
 	int wait=0,tat=0,at[10],bt[10],rt[10];
 	
 	printf("Enter Total Process:\n");
@@ -18,11 +18,11 @@ int main()
 	}
 	
 	printf("Enter Time Quantum=");
-	scanf("%d",&timeI);
+	scanf("%d",&timeInterval);
 	printf("\n\nProcess\t|Turnaround Time|Waiting Time\n\n");
 	for(time=0,i=0;a!=0;)
 	{
-	if(rt[i]<=timeI && rt[i]>0)
+	if(rt[i]<=timeInterval && rt[i]>0)
 	{
 		time=time+rt[i];
 		rt[i]=0;
@@ -30,8 +30,8 @@ int main()
 	}
 	else if(rt[i]>0)
 	{
-		rt[i]-=timeI;
-		time=time+timeI;
+		rt[i]-=timeInterval;
+		time=time+timeInterval;
 	}
 	
 	if(rt[i]==0 && f==1)
