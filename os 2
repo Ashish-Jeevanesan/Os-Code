@@ -61,4 +61,4 @@ int main()
 	printf("Average Turnaround Time(TAT) = %f",tat*1.0/n);
 	
 	return 0;
-}
+
