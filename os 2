@@ -49,7 +49,7 @@ int main()
 	}
 	else if(at[i+1]<=time)
 	{
-		i=i+1;
+		i++;
 	}
 	else
 	{
